@@ -3,7 +3,7 @@
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) {
 
-    HANDLE hMutex = CreateMutexA(NULL, FALSE, "SimpleTodoApp_Mutex");
+    HANDLE hMutex = CreateMutexA(NULL, FALSE, "SimpleTodoApp_Mutex");    // Created but not used, and not DeleteObject?
     if (GetLastError() == ERROR_ALREADY_EXISTS) {
         HWND hWnd = FindWindow("TodoApp", "Todo Application");
         if (hWnd) {
